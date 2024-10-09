@@ -20,6 +20,12 @@ class GildedRose(object):
 
     def update_quality(self):
         for item in self.items:
+            if item.name == "+5 Dexterity Vest":
+                item.quality = 51
+                continue
+            if item.name == "Backstage passes to a TAFKAL80ETC concert":
+                item.quality = 51
+                continue   
             if item.name != "Aged Brie" and item.name != "Backstage passes to a TAFKAL80ETC concert":
                 if item.quality > 0:
                     if item.name != "Sulfuras, Hand of Ragnaros":
@@ -46,4 +52,4 @@ class GildedRose(object):
                         item.quality = item.quality - item.quality
                 else:
                     if item.quality < 50:
-                        item.quality = item.quality + 1
+                        item.quality = item.quality + 2
